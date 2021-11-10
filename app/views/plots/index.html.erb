@@ -1,0 +1,11 @@
+<h1>List of All Plots by Number and Associated Plants</h1>
+
+<% @plots.each do |plot| %>
+  <div id="plot-<%= plot.id %>">
+  <h3>Plot Number: <%= plot.number %></h3>
+  <% plot.plants.each do |plant| %>
+    <%= plant.name %> <%= link_to('Remove',"/plot_plants/#{plant.plot_plant_id}", method: :delete) %><br>
+  <% end %>
+  </div>
+  <br>
+<% end %>
