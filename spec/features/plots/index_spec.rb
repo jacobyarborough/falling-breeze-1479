@@ -35,25 +35,25 @@ RSpec.describe 'plots index page' do
     visit plots_path
 
     within("#plot-#{@plot1.id}") do
-      expect(@page).to have_content(@plot1.number)
-      expect(@page).to have_content(@plant1.name)
-      expect(@page).to have_content(@plant2.name)
-      expect(@page).to have_content(@plant3.name)
-      expect(@page).to have_content(@plant4.name)
+      expect(page).to have_content(@plot1.number)
+      expect(page).to have_content(@plant1.name)
+      expect(page).to have_content(@plant2.name)
+      expect(page).to have_content(@plant3.name)
+      expect(page).to have_content(@plant4.name)
     end 
     within("#plot-#{@plot2.id}") do
-      expect(@page).to have_content(@plot2.number)
-      expect(@page).to have_content(@plant4.name)
-      expect(@page).to have_content(@plant5.name)
-      expect(@page).to have_content(@plant6.name)
-      expect(@page).to have_content(@plant7.name)
+      expect(page).to have_content(@plot2.number)
+      expect(page).to have_content(@plant4.name)
+      expect(page).to have_content(@plant5.name)
+      expect(page).to have_content(@plant6.name)
+      expect(page).to have_content(@plant7.name)
     end 
     within("#plot-#{@plot3.id}") do
-      expect(@page).to have_content(@plot3.number)
-      expect(@page).to have_content(@plant7.name)
-      expect(@page).to have_content(@plant8.name)
-      expect(@page).to have_content(@plant9.name)
-      expect(@page).to have_content(@plant10.name)
+      expect(page).to have_content(@plot3.number)
+      expect(page).to have_content(@plant7.name)
+      expect(page).to have_content(@plant8.name)
+      expect(page).to have_content(@plant9.name)
+      expect(page).to have_content(@plant10.name)
     end 
   end 
 
