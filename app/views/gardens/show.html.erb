@@ -1,0 +1,12 @@
+<h1><%= @garden.name %></h1>
+
+<h3>List of Plants</h3>
+<% plants_array = [] %>
+<% @garden.plots.each do |plot| %>
+  <% plot.plants.each do |plant| %>
+    <% plants_array.push(plant) if plant.days_to_harvest < 100 %>
+  <% end %>
+<% end %>
+<% plants_array.uniq.each do |plant| %>
+  <%= plant.name %><br>
+<% end %>
